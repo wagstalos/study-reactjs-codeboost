@@ -8,17 +8,18 @@ import HookUseState from "./components/HookUseState";
 import HookUseEffect from "./components/HookUseEffect";
 import HookuseRef from "./components/useRef";
 import TextoComBotao from "./components/TextWithButton";
-import Input from './components/Input'
+import Input from "./components/Input";
+import TextArea from "./components/Textarea";
+import Select from "./components/Select";
 
 import UserContext from "./context/UserContext";
 import User from "./components/User";
 
-
 function App() {
   const [count, setCount] = useState(0);
 
-  function handleCount(){
-    setCount(count + 1)
+  function handleCount() {
+    setCount(count + 1);
   }
   return (
     <>
@@ -43,13 +44,18 @@ function App() {
       <HookuseRef />
       <TextoComBotao />
 
-      <h2>User Comtext</h2>
-      <UserContext.Provider value={{ count, handleCount}}>
-        <User/>
+      <h2>User Context</h2>
+      <UserContext.Provider value={{ count, handleCount }}>
+        <User />
       </UserContext.Provider>
-
+      <hr />
       <h2>Input com React</h2>
       <Input />
+      <hr />
+      <TextArea />
+      <hr />
+
+      <Select />
     </>
   );
 }
