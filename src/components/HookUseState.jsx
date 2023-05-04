@@ -18,16 +18,16 @@ export default function HookUseState() {
             <h2>Use state</h2>
             <p>O useState é um hook do React que permite adicionar estado a um componente funcional. O estado é uma forma de armazenar dados que podem ser atualizados e que afetam a renderização do componente.
 
-O useState retorna um array com dois elementos: o primeiro é o valor atual do estado e o segundo é uma função que permite atualizar o estado. Quando a função setState é chamada, o componente é renderizado novamente com o novo valor do estado.</p>
+                O useState retorna um array com dois elementos: o primeiro é o valor atual do estado e o segundo é uma função que permite atualizar o estado. Quando a função setState é chamada, o componente é renderizado novamente com o novo valor do estado.</p>
             <p>contador: {count}</p>
             <button className="btn-rounded" onClick={sub}> -</button>
             <button className="btn-rounded" onClick={add}> +</button>
-<br />
+            <br />
             <button onClick={() => setIsShow(true)}>mostrar Nome</button>
             {
-                (isShow) &&  <p>Wagner silva</p>
+                (isShow) && <p>Wagner silva</p>
             }
-           
+
         </>
     )
 }

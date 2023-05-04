@@ -1,3 +1,4 @@
+import { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -7,10 +8,11 @@ import HookUseState from "./components/HookUseState";
 import HookUseEffect from "./components/HookUseEffect";
 import HookuseRef from "./components/useRef";
 import TextoComBotao from "./components/TextWithButton";
+import Input from './components/Input'
 
 import UserContext from "./context/UserContext";
 import User from "./components/User";
-import { useState } from "react";
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -45,6 +47,9 @@ function App() {
       <UserContext.Provider value={{ count, handleCount}}>
         <User/>
       </UserContext.Provider>
+
+      <h2>Input com React</h2>
+      <Input />
     </>
   );
 }
