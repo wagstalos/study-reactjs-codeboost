@@ -11,6 +11,7 @@ import TextoComBotao from "./components/TextWithButton";
 import Input from "./components/Input";
 import TextArea from "./components/Textarea";
 import Select from "./components/Select";
+import Radio from "./components/Radio"
 
 import UserContext from "./context/UserContext";
 import User from "./components/User";
@@ -22,7 +23,7 @@ function App() {
     setCount(count + 1);
   }
   return (
-    <>
+    <div className="container">
       <Header />
       <Title titulo="titulo 1" subtitulo="sub 01" />
       <Title titulo="titulo 2" subtitulo="sub 02" />
@@ -56,7 +57,13 @@ function App() {
       <hr />
 
       <Select />
-    </>
+
+      <Radio />
+
+      <footer>
+        desenvolvido por : Wagner
+      </footer>
+    </div>
   );
 }
 
