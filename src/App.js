@@ -12,9 +12,12 @@ import Input from "./components/Input";
 import TextArea from "./components/Textarea";
 import Select from "./components/Select";
 import Radio from "./components/Radio"
+import Checkbox from "./components/Checkbox";
+import Map from "./components/Map";
 
 import UserContext from "./context/UserContext";
 import User from "./components/User";
+import Card from "./components/style-components/Card";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -60,6 +63,16 @@ function App() {
 
       <Radio />
 
+      <Checkbox />
+
+      <Map /> 
+
+      <div className="d-flex space-between">
+        <Card />
+        <Card />
+      </div>
+
+      
       <footer>
         desenvolvido por : Wagner
       </footer>
