@@ -19,6 +19,9 @@ import UserContext from "./context/UserContext";
 import User from "./components/User";
 import Card from "./components/style-components/Card";
 
+import { Router } from "./Router";
+import { BrowserRouter } from "react-router-dom"
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -26,7 +29,12 @@ function App() {
     setCount(count + 1);
   }
   return (
+    <BrowserRouter>
     <div className="container">
+  
+        <Router />
+ 
+
       <Header />
       <Title titulo="titulo 1" subtitulo="sub 01" />
       <Title titulo="titulo 2" subtitulo="sub 02" />
@@ -77,6 +85,7 @@ function App() {
         desenvolvido por : Wagner
       </footer>
     </div>
+    </BrowserRouter>
   );
 }
 
