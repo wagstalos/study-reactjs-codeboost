@@ -11,7 +11,7 @@ import TextoComBotao from "./components/TextWithButton";
 import Input from "./components/Input";
 import TextArea from "./components/Textarea";
 import Select from "./components/Select";
-import Radio from "./components/Radio"
+import Radio from "./components/Radio";
 import Checkbox from "./components/Checkbox";
 import Map from "./components/Map";
 
@@ -20,7 +20,8 @@ import User from "./components/User";
 import Card from "./components/style-components/Card";
 
 import { Router } from "./Router";
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter } from "react-router-dom";
+import { Navigation } from "./components/Navigation";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,61 +31,58 @@ function App() {
   }
   return (
     <BrowserRouter>
-    <div className="container">
-  
+
+      <div className="container">
+        <Navigation />
         <Router />
- 
 
-      <Header />
-      <Title titulo="titulo 1" subtitulo="sub 01" />
-      <Title titulo="titulo 2" subtitulo="sub 02" />
-      <Title />
+        <Header />
+        <Title titulo="titulo 1" subtitulo="sub 01" />
+        <Title titulo="titulo 2" subtitulo="sub 02" />
+        <Title />
 
-      <hr />
+        <hr />
 
-      <h2>imagem</h2>
-      <img src={logo} alt="" width="50px" />
+        <h2>imagem</h2>
+        <img src={logo} alt="" width="50px" />
 
-      <hr />
-      <h2>OnClick</h2>
-      <button onClick={(event) => alert(event.type)}>button</button>
-      <hr />
-      <HookUseState />
-      <hr />
-      <HookUseEffect />
-      <hr />
-      <HookuseRef />
-      <TextoComBotao />
+        <hr />
+        <h2>OnClick</h2>
+        <button onClick={(event) => alert(event.type)}>button</button>
+        <hr />
+        <HookUseState />
+        <hr />
+        <HookUseEffect />
+        <hr />
+        <HookuseRef />
+        <TextoComBotao />
 
-      <h2>User Context</h2>
-      <UserContext.Provider value={{ count, handleCount }}>
-        <User />
-      </UserContext.Provider>
-      <hr />
-      <h2>Input com React</h2>
-      <Input />
-      <hr />
-      <TextArea />
-      <hr />
+        <h2>User Context</h2>
+        <UserContext.Provider value={{ count, handleCount }}>
+          <User />
+        </UserContext.Provider>
+        <hr />
+        <h2>Input com React</h2>
+        <Input />
+        <hr />
+        <TextArea />
+        <hr />
 
-      <Select />
+        <Select />
 
-      <Radio />
+        <Radio />
 
-      <Checkbox />
+        <Checkbox />
 
-      <Map /> 
+        <Map />
 
-      <div className="d-flex space-between">
-        <Card />
-        <Card />
+        <div className="d-flex space-between">
+          <Card />
+          <Card />
+        </div>
+
+        <footer>desenvolvido por : Wagner</footer>
       </div>
-
-      
-      <footer>
-        desenvolvido por : Wagner
-      </footer>
-    </div>
     </BrowserRouter>
   );
 }
